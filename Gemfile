@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'bootstrap-generators'
+gem 'omniauth-github'
+gem 'omniauth-twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
@@ -20,7 +22,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilderØ
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -33,6 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :production do
   gem 'pg'
 end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
@@ -45,6 +48,7 @@ group :development, :test do
   gem 'launchy'
   gem 'faker'
   gem 'sqlite3'
+  gem 'dotenv-rails'
   gem 'byebug', platform: :mri
 end
 
