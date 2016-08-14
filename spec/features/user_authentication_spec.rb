@@ -15,11 +15,11 @@ feature 'User Authentication' do
 
 
     # Fill in the fields with the following
-    fill_in 'First name', with: 'bob'
-    fill_in 'Last name', with: 'smith'
+    fill_in 'First Name', with: 'bob'
+    fill_in 'Last Name', with: 'smith'
     fill_in 'Email', with: 'bob@smith.com'
     fill_in 'Password', with: 'sup3rs3krit'
-    fill_in 'Password confirmation', with: 'sup3rs3krit'
+    fill_in 'Password Confirmation', with: 'sup3rs3krit'
 
     #The Click button should be clicked
     click_button 'Signup'

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'auth/:provider/callback', to:'sessions#oauth'
 
   root 'static_pages#index'
 
