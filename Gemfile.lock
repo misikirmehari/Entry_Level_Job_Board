@@ -284,9 +284,9 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen (~> 3.0.5)
-  pg
   omniauth-github
   omniauth-twitter
+  pg
   puma (~> 3.0)
   rails (~> 5.0.0)
   rspec-rails
