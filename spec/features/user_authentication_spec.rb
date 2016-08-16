@@ -29,6 +29,8 @@ feature 'User Authentication' do
     expect(page).to have_text('Thank you for signing up Bob')
     expect(page).to have_text('Signed in as bob@smith.com')
 
+    expect(ActionMailer::Base.deliveries).to have(1).email
+
   end
 
   scenario 'Allows existing users to login' do
