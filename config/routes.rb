@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  default_url_options host: 'localhost', port: 3000
+
+  get 'verification/:token', to:'users#verify', as:'verify_email'
 
   get 'auth/:provider/callback', to:'sessions#oauth'
 
