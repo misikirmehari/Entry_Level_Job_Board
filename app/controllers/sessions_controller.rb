@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
 
   private
   def omniauth_options
-    Rails.logger.critical(request.env['omniauth.auth'].inspect)
+    Rails.logger.fatal(request.env['omniauth.auth'].inspect)
     if auth_hash = request.env['omniauth.auth']
       first_name, last_name = auth_hash[:info][:name].split(/\s+/, 2)
       {
