@@ -1,5 +1,5 @@
 <%= form_tag(jobs_path, method: 'get') do %>
-  <%= text_field_tag(:q) %>
+  <%= text_field_tag(:q, params[:q]) %>
   <%= submit_tag("search") %>
 <% end %>
 
