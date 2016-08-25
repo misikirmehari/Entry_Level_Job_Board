@@ -1,183 +1,91 @@
-<!DOCTYPE html>
-<!-- Template by quackit.com -->
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>3 Column Layout</title>
-  <style type="text/css">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
 
-    /* Layout */
-    body {
-      min-width: 630px;
-    }
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <%= image_tag('rails3.jpeg') %>
+        <div class="carousel-caption">
+         ...
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag('Rails.jpeg') %>
+        <div class="carousel-caption">
+          ...
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag('rails2.png') %>
+        <div class="carousel-caption">
+          ...
+        </div>
+      </div>
+    </div>
 
-    #container {
-      padding-left: 200px;
-      padding-right: 190px;
-    }
-
-    #container .column {
-      position: relative;
-      float: left;
-    }
-
-    #center {
-      padding: 10px 20px;
-      width: 100%;
-    }
-
-    #left {
-      width: 180px;
-      padding: 0 10px;
-      right: 240px;
-      margin-left: -100%;
-    }
-
-    #right {
-      width: 130px;
-      padding: 0 10px;
-      margin-right: -100%;
-    }
-
-    #footer {
-      clear: both;
-    }
-
-    /* IE hack */
-    * html #left {
-      left: 150px;
-    }
-
-    /* Make the columns the same height as each other */
-    #container {
-      overflow: hidden;
-    }
-
-    #container .column {
-      padding-bottom: 1001em;
-      margin-bottom: -1000em;
-    }
-
-    /* Fix for the footer */
-    * html body {
-      overflow: hidden;
-    }
-
-    * html #footer-wrapper {
-      float: left;
-      position: relative;
-      width: 100%;
-      padding-bottom: 10010px;
-      margin-bottom: -10000px;
-      background: #fff;
-    }
-
-    /* Aesthetics */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family:Sans-serif;
-      line-height: 1.5em;
-    }
-
-    p {
-      color: #555;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul a {
-      color: darkgreen;
-      text-decoration: none;
-    }
-
-    #header, #footer {
-      font-size: large;
-      padding: 0.3em;
-      background: #BCCE98;
-    }
-
-    #left {
-      background: #DAE9BC;
-    }
-
-    #right {
-      background: #F7FDEB;
-    }
-
-    #center {
-      background: #fff;
-    }
-
-    #container .column {
-      padding-top: 1em;
-    }
-
-  </style>
-
-  <script type="text/javascript">
-    /* =============================
-     This script generates sample text for the body content.
-     You can remove this script and any reference to it.
-     ============================= */
-    var bodyText=["The smaller your reality, the more convinced you are that you know everything.", "If the facts don't fit the theory, change the facts.", "The past has no power over the present moment.", "This, too, will pass.", "</p><p>You will not be punished for your anger, you will be punished by your anger.", "Peace comes from within. Do not seek it without.", "<h3>Heading</h3><p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now."]
-    function generateText(sentenceCount){
-      for (var i=0; i<sentenceCount; i++)
-        document.write(bodyText[Math.floor(Math.random()*7)]+" ")
-    }
-  </script>
-</head>
-
-<body>
-
-<header id="header"><p>Header...</p></header>
-
-<div id="container">
-
-  <main id="center" class="column">
-    <article>
-
-      <h1>Heading</h1>
-      <p><script>generateText(50)</script></p>
-
-    </article>
-  </main>
-
-  <nav id="left" class="column">
-    <h3>Left heading</h3>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-      <li><a href="#">Link 5</a></li>
-    </ul>
-    <h3>Left heading</h3>
-    <ul>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-      <li><a href="#">Link 5</a></li>
-    </ul>
-
-  </nav>
-
-  <div id="right" class="column">
-    <h3>Right heading</h3>
-    <p><script>generateText(1)</script></p>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
-</div>
 
-<div id="footer-wrapper">
-  <footer id="footer"><p>Footer...</p></footer>
-</div>
-
-</body>
-
-</html>
+<!-- Page Content -->
+<!-- Marketing Icons Section -->
+<div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">
+        Welcome to RoR Job Board
+      </h1>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
+        </div>
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in
+            alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum
+            quod?</p>
+          <a href="#" class="btn btn-default">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+        </div>
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in
+            alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum
+            quod?</p>
+          <a href="#" class="btn btn-default">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
+        </div>
+        <div class="panel-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in
+            alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum
+            quod?</p>
+          <a href="#" class="btn btn-default">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- /.row -->

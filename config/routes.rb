@@ -21,4 +21,6 @@ Rails.application.routes.draw do
 
   get 'contact' => 'static_pages#contact'
 
+  get 'news' => 'news#index'
+
 end

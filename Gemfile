@@ -5,6 +5,8 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'indeed_api'
+gem 'searchbing'
+gem 'google_custom_search'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
