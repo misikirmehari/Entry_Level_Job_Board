@@ -1,4 +1,20 @@
-<h1> Latest News </h1>
-<% bing_client = Bing.new('jmKxP+B6VBhVca/1t+dRz8qv6ySvNSrykDmRYE/2qN4',20,'News') %>
-<% bing_results = bing_client.search("ruby",10)  %>
-<%= puts bing_results[0][:Image][0][:MediaUrl] %>
+<h2> Latest News </h2>
+<ul>
+  <% @news_results[0][:News].each do |news_result| %>
+    <li>
+      <div>
+        <p><b> <%= link_to news_result[:Title], news_result[:Url], target: "_blank" %></b></p>
+        <p><%= news_result[:__metadata] %> </p>
+        <p><%= news_result[:ID] %> </p>
+        <p><%= news_result[:Source] %> </p>
+        <p><%= news_result[:Description] %> </p>
+        <p><%= news_result[:Date] %> </p>
+      </div>
+    </li>
+
+    <hr>
+  <% end %>
+</ul>
+
+
+
