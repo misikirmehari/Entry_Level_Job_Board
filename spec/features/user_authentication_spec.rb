@@ -27,7 +27,6 @@ feature 'User Authentication' do
     # When the signup button is clicked expect the page to have the following
     # Message
 
-    save_and_open_page
     expect(page).to have_text('Thank you for signing up Bob')
     expect(page).to have_text('Signed in as bob@smith.com')
 
