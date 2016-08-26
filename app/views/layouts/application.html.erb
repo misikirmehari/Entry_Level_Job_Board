@@ -41,7 +41,6 @@
             <li class="<%= active_class(about_path) %>">
 
               <% if current_user %>
-                Signed in as <%= current_user.email %>
                 <%= link_to 'Logout', logout_path, method: :delete %>
 
               <% else %>

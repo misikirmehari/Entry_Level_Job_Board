@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
     @user = User.where(email: omniauth_options[:email]).first_or_initialize(omniauth_options)
     if @user.persisted?
       session[:id] = @user.id
-      redirect_to profile_page_path,
+      redirect_to profile_page_path(current_user),
         notice: "Welcome back #{@user.first_name.titleize}."
     else
       render 'users/new'

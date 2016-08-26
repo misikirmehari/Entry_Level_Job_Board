@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       @user.needs_verification!
       session[:id] = @user.id
-      redirect_to profile_page_path,
+      redirect_to profile_page_path(current_user),
         notice: "Thank you for signing up #{@user.first_name.titlecase}"
 
     else
