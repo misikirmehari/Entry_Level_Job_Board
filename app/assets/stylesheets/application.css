@@ -19,3 +19,15 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.btn-github {
+  width: 100%;
+}
+
+div.center {
+  margin: 0px auto;
+  text-align: center;
+  width: 118%;
+}
+
+

@@ -4,11 +4,11 @@
 <% end %>
 
 <ul>
-  <% @search_results.each do |job| %>
+  <% @search_results.each_with_index do |job, index| %>
     <li>
       <div>
 
-        <p><b> <%= link_to job.job_title, job.url, target: "_blank" %> </b></p>
+        <p><b> <%= link_to job.job_title, job.url, target: "_blank" %> <%= index %> of 50 </b></p>
         <p><%= job.company %> </p>
         <p> <%= job.formatted_location %> </p>
         <p><%= job.snippet %> </p>
@@ -17,7 +17,7 @@
     </li>
     <hr>
   <% end %>
-
+  <%= link_to 'Next Page', jobs_path(start_at: @next_page) %>
 
 </ul>
 

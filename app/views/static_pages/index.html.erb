@@ -51,26 +51,40 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.2.0</h4>
+          <h4><i class="fa fa-fw fa-check"></i> Ruby Jobs </h4>
         </div>
         <div class="panel-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in
-            alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum
-            quod?</p>
-          <a href="#" class="btn btn-default">Learn More</a>
+          <% @search_results.last(1).map do |job| %>
+          <p><b> <%= link_to job.job_title, job.url, target: "_blank" %> </b></p>
+            <%= job.company %> </p>
+            <%= job.formatted_location %> </p>
+            <%= job.snippet %> </p>
+          <% end %>
+          </p>
+          <a <%= link_to button_tag('Learn More' ,class:'btn btn-default'),jobs_path %> </a>
         </div>
       </div>
     </div>
+
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
+          <h4><i class="fa fa-fw fa-gift"></i> Latest News </h4>
         </div>
         <div class="panel-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in
-            alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum
-            quod?</p>
-          <a href="#" class="btn btn-default">Learn More</a>
+          <p>
+            <% @news_results[0][:News].map do |news_result| %>
+              <div>
+              <p><b> <%= link_to news_result[:Title], news_result[:Url], target: "_blank" %></b></p>
+              <p><%= news_result[:Source] %> </p>
+              <p><%= news_result[:Description] %> </p>
+              <p><%= news_result[:Date] %> </p>
+              </div>
+
+              <% end %>
+
+          </p>
+            <a <%= link_to button_tag('Read More' ,class:'btn btn-default'),news_path %> </a>
         </div>
       </div>
     </div>
