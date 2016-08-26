@@ -1,105 +1,136 @@
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <%= image_tag('rails3.jpeg') %>
-        <div class="carousel-caption">
-         ...
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag('Rails.jpeg') %>
-        <div class="carousel-caption">
-          ...
-        </div>
-      </div>
-      <div class="item">
-        <%= image_tag('rails2.png') %>
-        <div class="carousel-caption">
-          ...
-        </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <%= image_tag('rails3.jpeg') %>
+      <div class="carousel-caption">
+        ...
       </div>
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="item">
+      <%= image_tag('Rails.jpeg') %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag('rails2.png') %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
   </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 
 <!-- Page Content -->
 <!-- Marketing Icons Section -->
 <div class="row">
-    <div class="col-lg-12">
-      <h1 class="page-header">
-        Welcome to RoR Job Board
-      </h1>
-    </div>
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4><i class="fa fa-fw fa-check"></i> Ruby Jobs </h4>
-        </div>
-        <div class="panel-body">
-          <% @search_results.last(1).map do |job| %>
+  <div class="col-lg-12">
+    <h1 class="page-header">
+      Welcome to RoR Job Board
+    </h1>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><i class="fa fa-fw fa-check"></i> Ruby Jobs </h4>
+      </div>
+      <div class="panel-body">
+        <% @search_results.last(1).map do |job| %>
           <p><b> <%= link_to job.job_title, job.url, target: "_blank" %> </b></p>
-            <%= job.company %> </p>
-            <%= job.formatted_location %> </p>
-            <%= job.snippet %> </p>
-          <% end %>
-          </p>
-          <a <%= link_to button_tag('Learn More' ,class:'btn btn-default'),jobs_path %> </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4><i class="fa fa-fw fa-gift"></i> Latest News </h4>
-        </div>
-        <div class="panel-body">
-          <p>
-            <% @news_results[0][:News].map do |news_result| %>
-              <div>
-              <p><b> <%= link_to news_result[:Title], news_result[:Url], target: "_blank" %></b></p>
-              <p><%= news_result[:Source] %> </p>
-              <p><%= news_result[:Description] %> </p>
-              <p><%= news_result[:Date] %> </p>
-              </div>
-
-              <% end %>
-
-          </p>
-            <a <%= link_to button_tag('Read More' ,class:'btn btn-default'),news_path %> </a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h4><i class="fa fa-fw fa-compass"></i> Easy to Use</h4>
-        </div>
-        <div class="panel-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in
-            alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum
-            quod?</p>
-          <a href="#" class="btn btn-default">Learn More</a>
-        </div>
+          <%= job.company %> </p>
+          <%= job.formatted_location %> </p>
+          <%= job.snippet %> </p>
+        <% end %>
+        </p>
+        <a <%= link_to button_tag('Learn More', class: 'btn btn-default'), jobs_path %> </a>
       </div>
     </div>
   </div>
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><i class="fa fa-fw fa-gift"></i> Latest News </h4>
+      </div>
+      <div class="panel-body">
+        <p>
+          <% @news_results[0][:News].map do |news_result| %>
+            <div>
+            <p><b> <%= link_to news_result[:Title], news_result[:Url], target: "_blank" %></b></p>
+            <p><%= news_result[:Source] %> </p>
+            <p><%= news_result[:Description] %> </p>
+            <p><%= news_result[:Date] %> </p>
+            </div>
+
+          <% end %>
+
+          </p>
+          <a <%= link_to button_tag('Read More', class: 'btn btn-default'), news_path %> </a>
+          </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4><i class="fa fa-fw fa-compass"></i> Ruby On Rails Resources </h4>
+    </div>
+    <div class="panel-body">
+      <p>
+      <li>
+        <a href="https://www.davinciinstitute.com/" target="_blank"> <b>Davinci Institute</b></a>
+      </li>
+
+      <li>
+        <a href="https://www.railstutorial.org/book" target="_blank"> <b>Learn Web Development with Rails </b></a>
+      </li>
+
+      <li>
+        <a href="https://www.ruby-toolbox.com/" target="_blank"> <b>The Ruby Tool Box </b></a>
+      </li>
+
+      <li>
+        <a href="http://www.galvanize.com/" target="_blank"> <b> Galvanize </b></a>
+      </li>
+
+      <li>
+        <a href="https://www.switchup.org/" target="_blank"> <b> Switch Up </b></a>
+      </li>
+
+      <li>
+        <a href="https://hired.com/" target="_blank"> <b> Hired </b></a>
+      </li>
+
+      <li>
+        <a href="http://guides.rubyonrails.org/index.html" target="_blank"> <b> Ruby on Rails Guides </b></a>
+      </li>
+
+      <li>
+        <a href="https://rubygems.org/" target="_blank"> <b> Ruby Gems </b></a>
+      </li>
+
+      </p>
+      <a <%= link_to button_tag('Explore', class: 'btn btn-default'), resource_path %> </a>
+    </div>
+  </div>
+</div>
+</div>
 <!-- /.row -->

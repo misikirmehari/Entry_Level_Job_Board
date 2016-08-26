@@ -23,4 +23,6 @@ Rails.application.routes.draw do
 
   get 'news' => 'news#index'
 
+  get 'resource' => 'static_pages#resource'
+
 end

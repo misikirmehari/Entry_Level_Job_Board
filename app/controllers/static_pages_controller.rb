@@ -19,4 +19,8 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def resource
+
+  end
+
 end

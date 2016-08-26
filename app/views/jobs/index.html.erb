@@ -1,8 +1,4 @@
-<%= form_tag(jobs_path, method: 'get') do %>
-  <%= text_field_tag(:q, params[:q]) %>
-  <%= submit_tag("search") %>
-<% end %>
-
+<h2> Jobs Search </h2>
 <ul>
   <% @search_results.each_with_index do |job, index| %>
     <li>
