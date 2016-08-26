@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
       session[:id] = user.id
-      redirect_to root_path,
+      redirect_to profile_page_path,
         notice: "Welcome back #{user.first_name.titleize}"
     else
       flash[:error] = 'Invalid email or password'
@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
     @user = User.where(email: omniauth_options[:email]).first_or_initialize(omniauth_options)
     if @user.persisted?
       session[:id] = @user.id
-      redirect_to root_path,
+      redirect_to profile_page_path,
         notice: "Welcome back #{@user.first_name.titleize}."
     else
       render 'users/new'

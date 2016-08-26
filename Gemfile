@@ -7,6 +7,7 @@ gem 'omniauth-google-oauth2'
 gem 'indeed_api'
 gem 'searchbing'
 gem 'google_custom_search'
+gem 'will_paginate', '~> 3.1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'

@@ -25,4 +25,6 @@ Rails.application.routes.draw do
 
   get 'resource' => 'static_pages#resource'
 
+  get 'users/:id', to:'users#show', as: 'profile_page'
+
 end
