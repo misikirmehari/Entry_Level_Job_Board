@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ ## RoR Job Board
 
-Things you may want to cover:
+This is a Ruby on Rails application I developed as part of the
+[Building the Toolbelt of a Junior Ruby on Rails Engineer](http://www.davincicoders.com/rubyonrailscourse/)
+class I took in the Summer of 2016.
 
-* Ruby version
+Features:
+ User Authentication
+  * Job Search 
+  * News Feed
+  * User Verification via Email
+  * Bootstrap 
 
-* System dependencies
+Usage:
 
-* Configuration
+  Clone the Repo locally
+  cd into that directory
+  
+    bundle
+    
+    rails s
 
-* Database creation
+  Visit your copy at http://localhost:3000
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Note: To check it out in action, visit https://entry-level-job-board.herokuapp.com/.
