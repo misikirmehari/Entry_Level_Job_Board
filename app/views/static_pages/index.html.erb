@@ -54,7 +54,7 @@
         <h4><i class="fa fa-fw fa-check"></i> Ruby Jobs </h4>
       </div>
       <div class="panel-body">
-        <% @search_results.last(1).map do |job| %>
+        <% @search_results.last(2).map do |job| %>
           <p><b> <%= link_to job.job_title, job.url, target: "_blank" %> </b></p>
           <%= job.company %> </p>
           <%= job.formatted_location %> </p>
@@ -73,14 +73,13 @@
       </div>
       <div class="panel-body">
         <p>
-          <% @news_results[0][:News].map do |news_result| %>
+          <% @news_results[0][:News].last(2).map do |news_result| %>
             <div>
             <p><b> <%= link_to news_result[:Title], news_result[:Url], target: "_blank" %></b></p>
             <p><%= news_result[:Source] %> </p>
             <p><%= news_result[:Description] %> </p>
             <p><%= news_result[:Date] %> </p>
             </div>
-
           <% end %>
 
           </p>
