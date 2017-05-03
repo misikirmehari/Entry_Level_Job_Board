@@ -73,66 +73,59 @@
       </div>
       <div class="panel-body">
         <p>
-          <% @news_results[0][:News].last(2).map do |news_result| %>
-            <div>
-            <p><b> <%= link_to news_result[:Title], news_result[:Url], target: "_blank" %></b></p>
-            <p><%= news_result[:Source] %> </p>
-            <p><%= news_result[:Description] %> </p>
-            <p><%= news_result[:Date] %> </p>
-            </div>
-          <% end %>
 
-          </p>
-          <a <%= link_to button_tag('Read More', class: 'btn btn-default'), news_path %> </a>
-          </div>
-  </div>
-</div>
-<div class="col-md-4">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4><i class="fa fa-fw fa-compass"></i> Ruby On Rails Resources </h4>
-    </div>
-    <div class="panel-body">
-      <p>
-      <li>
-        <a href="http://www.davincicoders.com/" target="_blank"> <b>Davinci Coders</b></a>
-      </li>
-      <li>
-        <a href="https://www.davinciinstitute.com/" target="_blank"> <b>Davinci Institute</b></a>
-      </li>
 
-      <li>
-        <a href="https://www.railstutorial.org/book" target="_blank"> <b>Learn Web Development with Rails </b></a>
-      </li>
-
-      <li>
-        <a href="https://www.ruby-toolbox.com/" target="_blank"> <b>The Ruby Tool Box </b></a>
-      </li>
-
-      <li>
-        <a href="http://www.galvanize.com/" target="_blank"> <b> Galvanize </b></a>
-      </li>
-
-      <li>
-        <a href="https://www.switchup.org/" target="_blank"> <b> Switch Up </b></a>
-      </li>
-
-      <li>
-        <a href="https://hired.com/" target="_blank"> <b> Hired </b></a>
-      </li>
-
-      <li>
-        <a href="http://guides.rubyonrails.org/index.html" target="_blank"> <b> Ruby on Rails Guides </b></a>
-      </li>
-
-      <li>
-        <a href="https://rubygems.org/" target="_blank"> <b> Ruby Gems </b></a>
-      </li>
-
-      </p>
-      <a <%= link_to button_tag('Explore', class: 'btn btn-default'), resource_path %> </a>
+        </p>
+        <a <%= link_to button_tag('Read More', class: 'btn btn-default'), news_path %> </a>
+      </div>
     </div>
   </div>
-</div>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4><i class="fa fa-fw fa-compass"></i> Ruby On Rails Resources </h4>
+      </div>
+      <div class="panel-body">
+        <p>
+        <li>
+          <a href="http://www.davincicoders.com/" target="_blank"> <b>Davinci Coders</b></a>
+        </li>
+        <li>
+          <a href="https://www.davinciinstitute.com/" target="_blank"> <b>Davinci Institute</b></a>
+        </li>
+
+        <li>
+          <a href="https://www.railstutorial.org/book" target="_blank"> <b>Learn Web Development with Rails </b></a>
+        </li>
+
+        <li>
+          <a href="https://www.ruby-toolbox.com/" target="_blank"> <b>The Ruby Tool Box </b></a>
+        </li>
+
+        <li>
+          <a href="http://www.galvanize.com/" target="_blank"> <b> Galvanize </b></a>
+        </li>
+
+        <li>
+          <a href="https://www.switchup.org/" target="_blank"> <b> Switch Up </b></a>
+        </li>
+
+        <li>
+          <a href="https://hired.com/" target="_blank"> <b> Hired </b></a>
+        </li>
+
+        <li>
+          <a href="http://guides.rubyonrails.org/index.html" target="_blank"> <b> Ruby on Rails Guides </b></a>
+        </li>
+
+        <li>
+          <a href="https://rubygems.org/" target="_blank"> <b> Ruby Gems </b></a>
+        </li>
+
+        </p>
+        <a <%= link_to button_tag('Explore', class: 'btn btn-default'), resource_path %> </a>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- /.row -->
